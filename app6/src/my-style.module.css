@@ -1,0 +1,305 @@
+body{
+  
+  animation-name: appear;
+  animation-duration: 1s;
+  overflow-y: clip;
+  overflow-x: hidden;
+  background-color:whitesmoke;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input:focus {
+  border: 3px solid #555;
+}
+
+.IncreasButton{
+  
+  color: white;
+  font-size: 30px;
+  background-color: green;
+  height: 40px;
+  width: 40px;
+  border: 1px solid grey;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-left: 5px; 
+  position: relative;
+  top:3px 
+}
+.DecreaseButton{
+  
+  color: white;
+  font-size: 30px;
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  border: 1px solid grey;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 5px; 
+  position: relative;
+  top:3px 
+  
+}
+
+.Form{
+  width: 40%;
+  margin:auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ButtomSubmit {
+  background-color: blueviolet; /* Green */
+  border: none;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.4s, width 0.05s, height 0.05s;
+  width:80px;
+  height:52px;
+}
+
+.ButtomDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.ButtomSubmit:hover{
+  background-color: blue;
+}
+
+.ButtomSubmit:active{
+  background-color: blue;
+  width:74px;
+  height:46px;
+  margin:3px;
+  
+}
+
+
+.liAnimal{
+  display: flex;
+  margin-right:3%;
+  margin-top:3%;
+}
+
+@keyframes appear {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.LiStyle{
+  font-size: 2rem;
+  list-style-type: none;
+  display: flex;
+  background: rgb(6, 6, 75);
+  height:4rem;
+  box-shadow: 5px 10px 8px 10px #888888;
+  border-bottom: 2px solid rgb(89, 188, 245);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.DisplayContent{
+  width:90vw;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.Filter{
+  text-align: center;
+  list-style-type: none;
+  padding: 3%;
+  margin-right: 30px;
+  font-size: 110%;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0.5px solid gray;
+  background-color:white;
+  border-radius:1vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 110%;
+  
+}
+
+.Filter > div{
+  position: relative;
+  top: 1.5vh;
+  margin: 10px;
+  line-height: 2;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.InputNum{
+  width: 70px;
+  margin-left: 8px;
+  font-size: 20px;
+  color: grey;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.InputName{
+  width: 150px;
+  margin-left: 15px;
+}
+
+.button{
+  background-color: rgb(6, 6, 75);; /* Green */
+  border: none;
+  color: white;
+  padding: 4px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s, margin 0.05s, padding 0.05s;
+  position: relative;
+  top:8px 
+}
+
+.button:hover{
+  background-color: blue;
+}
+
+.button:active{
+  background-color: blue;
+  padding: 2px 13px;
+  margin:2px;
+  
+}
+
+.ArticleBlog{
+  font-size: 3vh;
+  color:blueviolet;
+  text-align: center;
+  margin: 0 auto;
+  animation-name: moveblog;
+  animation-duration: 0.5s;
+  width: 80%;
+  margin-top: 10vh;
+  font-family: Arial, Helvetica, sans-serif
+  
+}
+
+@keyframes moveblog {
+  
+  0%   {margin-top: 200vh;}
+  100% {margin-top: 5%;}
+}
+
+.container {
+
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  height: 15px;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: green;
+}
+
+
+.ContactBlog{
+  
+  font-size: 110%;
+  line-height: 35px;
+  color:rgb(31, 27, 27);
+  text-align: center;
+  margin: 2vh auto;
+  animation-name: moveContact;
+  animation-duration: 0.5s;
+  width: 100%;
+  height: 60vh;
+  overflow-y: scroll;
+  font-family: Arial, Helvetica, sans-serif
+  
+}
+
+@keyframes moveContact {
+  
+  0%   {margin-top: 200vh;
+        
+  }
+  100% {margin-top: 5%;}
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(6, 6, 75);; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(31, 31, 100); 
+}
+
+a{
+  text-decoration: none;
+  color:rgb(168, 52, 120);
+}
+
+a:hover{
+  color:rgb(219, 219, 240);
+  
+}
+
+.ShowAnimal{
+  border: 0.5px solid rgb(150, 146, 146);
+  background-color: white;
+  border-radius:1vh;
+  list-style-type:none;
+  margin-bottom: 3vh;
+  margin-right: 10px;
+  padding: 2%;
+}
+
+.LiNav {
+  margin-left: 10px;
+  transition: margin-top 0.2s;
+  
+}
+
+.LiNav:hover{
+  margin-top: 0.5rem;
+  
+}
+a:active{
+  text-shadow: 0px 0px 5px rgb(241, 235, 235);
+  
+}
+
