@@ -8,6 +8,7 @@ import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 
+
 export default function App() {
   
   return (
@@ -21,9 +22,11 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    
+      
+    
   );
 }
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

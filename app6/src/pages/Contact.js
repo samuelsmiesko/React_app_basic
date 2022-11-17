@@ -2,13 +2,15 @@ import styles from '../my-style.module.css';
 import AnimalInfo from './Datas';
 import CheckboxExample from "../components/FilterItems";
 import CheckA from "../components/Checkbox";
-
+import AddForm from "../components/AddForm";
 
 
 function DisplayAnimal(props){
   
     return[
+      
       <li className={styles.ShowAnimal}>
+        
         <h2>{props.species}</h2>
           <div style={{Width: '90%',margin: '10px', textAlign: 'left', paddingBottom:'20px'}}>
               <img style={{maxHeight: '250px',maxWidth: '50%', margin:'15px', float: 'left'}} src={props.picture} alt={props.species}/>{props.article}
@@ -21,6 +23,7 @@ function DisplayAnimal(props){
               </div>
           </div>
       </li>
+      
     ]
   
 }
@@ -35,6 +38,7 @@ const Contact = () => {
       
         <article>
           <CheckboxExample/>
+          <AddForm/>
           <div className={styles.ContactBlog} >
 
               <ul >{selected.map((animal) => <DisplayAnimal key={animal.id} 
@@ -48,7 +52,9 @@ const Contact = () => {
             
           </div>
         </article>
+        
       </div>
+      
       ]
 
   };

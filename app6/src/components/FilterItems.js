@@ -134,26 +134,34 @@ const FilterItem = () => {
           <div>
             <span><label for="weight filter">Enter max. weight (kg)</label></span>
             <span><input id="weight1" value={count1} className={styles.InputNum} type="number"  name="maxweight" ></input></span>
-            <span><button className={styles.IncreasButton} onClick={() => Increment()}>+</button></span>
-            <span><button className={styles.DecreaseButton} onClick={() => Decrement()}>-</button></span>
+            <span style={{whiteSpace: "nowrap"}}>
+              <span><button className={styles.IncreasButton} onClick={() => Increment()}>+</button></span>
+              <span><button className={styles.DecreaseButton} onClick={() => Decrement()}>-</button></span>
+            </span>
           </div>
           <div >
             <span><label  for="height filter max">Enter min. weight (kg)</label></span>
             <span><input  value={count2} className={styles.InputNum} type="number" id="height1" name="maxheight"  min="1.8" max="1000"></input></span>
-            <span><button className={styles.IncreasButton} onClick={() => Increment2()}>+</button></span>
-            <span><button className={styles.DecreaseButton} onClick={() => Decrement2()}>-</button></span>
+            <span style={{whiteSpace: "nowrap"}}>
+              <span><button className={styles.IncreasButton} onClick={() => Increment2()}>+</button></span>
+              <span><button className={styles.DecreaseButton} onClick={() => Decrement2()}>-</button></span>
+            </span>
           </div>
           <div>
             <span><label for="weight filter min">Enter max. height (m)</label></span>
             <span><input value={count3} className={styles.InputNum} type="number" id="weight2" name="minweight"  min="10" max="1000"></input></span>
-            <span><button className={styles.IncreasButton} onClick={() => Increment3()}>+</button></span>
-            <span><button className={styles.DecreaseButton} onClick={() => Decrement3()}>-</button></span>
+            <span style={{whiteSpace: "nowrap"}}>
+              <span><button className={styles.IncreasButton} onClick={() => Increment3()}>+</button></span>
+              <span><button className={styles.DecreaseButton} onClick={() => Decrement3()}>-</button></span>
+              </span>
           </div>
           <div>
             <span><label  for="height filter min">Enter min. height (m)</label></span>
             <span><input  value={count4} className={styles.InputNum} type="number" id="height1" name="minheight"  min="1.1" max="1000"></input></span>
-            <span><button className={styles.IncreasButton} onClick={() => Increment4()}>+</button></span>
-            <span><button className={styles.DecreaseButton} onClick={() => Decrement4()}>-</button></span>
+            <span style={{whiteSpace: "nowrap"}}>
+              <span><button className={styles.IncreasButton} onClick={() => Increment4()}>+</button></span>
+              <span><button className={styles.DecreaseButton} onClick={() => Decrement4()}>-</button></span>
+            </span>
           </div>
           <div>
             <span><label  for="height filter min">Enter name </label></span>

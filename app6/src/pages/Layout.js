@@ -1,44 +1,54 @@
-//import { Children } from "react";
 import { Outlet, Link } from "react-router-dom";
 import styles from '../my-style.module.css'
 import '../my-sass.scss';
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer";
 
-const handleClick = event => {
+
+function Layout() {
+   const handleClick = event => {
+  
+          var ul = document.querySelectorAll('ul li');
+          
+          console.log(ul)
+          
+           for (var i = 0; i < 6; ++i) {
+            
+            ul[i].classList.remove("Tagged");
+           }
+
+         let target =document.getElementById(event.currentTarget.id)
+         
+         target.classList.toggle("Tagged");
+  };
+
   
 
-    //toggleElements.classList.remove('Tagged');
-    const lis = document.querySelectorAll('li');
-    console.log(lis);
-    console.log(lis[0],"0");
-    for (let i = 0; i < 3; i++) {
-      lis[i].classList.remove('Tagged');
-    }
-    
-    event.currentTarget.classList.toggle('Tagged');
-
-};
-
-const Layout = () => {
-  
   return (
     <>
       <nav>
+        
         <ul id="foo" className={styles.LiStyle} >
-          <li className={styles.LiNav} li key={0}onClick={handleClick}>
+          <Navbar></Navbar>
+          <li className={styles.LiNav} id ="b1" key={0} onClick={handleClick}>
             <Link to="/">Home</Link>
           </li>
-          <li className={styles.LiNav} key={1} onClick={handleClick}>
+          <li className={styles.LiNav} id ="b2" key={1} onClick={handleClick}>
             <Link to="/blogs">Blogs</Link>
           </li>
-          <li className={styles.LiNav} key={2} onClick={handleClick}>
+          <li className={styles.LiNav} id ="b3" key={2} onClick={handleClick}>
             <Link to="/contact">Contact</Link>
           </li>
+          
         </ul>
       </nav>
+      
       <Outlet />
+      <Footer></Footer>
+      
     </>
    )
   
-};
+  }
 
-export default Layout;
+  export default Layout;
